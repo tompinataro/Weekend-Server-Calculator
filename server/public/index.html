@@ -20,14 +20,16 @@
 
     <form data-testid="calculator">
       <input data-testid="numOne" placeholder="First Number">
-      <button>+</button>
-      <button>-</button>
-      <button>*</button>
-      <button>/</button>
+      <button onclick="addOperator(event,'+')">+</button>
+      <button onclick="addOperator(event,'-')">-</button>
+      <button onclick="addOperator(event,'*')">*</button>
+      <button onclick="addOperator(event,'/')">/</button>
       <input data-testid="numTwo" placeholder="Second Number">
-      <button>=</button>
-      <button>C</button>
+      <button onclick="createNewCalculation(event)">=</button>
+      <button onclick="resetCalculation(event)">C</button>
     </form>
+
+      console.log("this is line 32");
 
     <section data-testid="recentResult">
       <!-- The most recent calculation result goes here. 
