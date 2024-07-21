@@ -2,6 +2,10 @@ const express = require('express');
 const app = express();
 let PORT = process.env.PORT || 5010;
 
+// To console.log the current PORT on the 
+//local server into the Terminal:
+console.log('Current PORT as seen in the Terminal:', PORT);
+
 //should port above be 5001?????
 
 // // Serve up static files (HTML, CSS, Client JS)
@@ -12,6 +16,7 @@ app.use(express.static('server/public'));
 // calculation objects:
 let calculations = []
 
+console.log("This is line 19 in server.js and should appear in the terminal...")
 //* All mathematical logic **must** be implemented on the server.
 //* Calculation history data **must** be stored on the server.
 

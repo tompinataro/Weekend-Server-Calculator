@@ -20,6 +20,7 @@ function createCalculation(event) {
 let calculationsArray = [];
 // //* Each *calculation object* stored in the `calculations` array 
 // //should have this shape:
+console.log("Line 23 client.js should appear in the browser console");
 
 // let newCalculationObject = {
 //     numOne: numOne, //key value pair
