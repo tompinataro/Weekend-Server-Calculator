@@ -3,20 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>Server-Side Calculator</title>    
-    <link rel="stylesheet" href="styles.css">
     <script defer src="scripts/axios.js"></script>
     <script defer src="scripts/client.js" charset="utf-8"></script>
   </head>
   <body>
     <h1>Server-Side Calculator</h1>
-
-    <!-- * Create a user interface where the user can 
-     input two values and select a mathematical operator.
-   
-  * When the `=` button is clicked, capture the input values 
-  and operator, then send this data to `POST '/calculations'`. 
-  You'll need to format it like so:
-    { numOne: 25, numTwo: 10, operator: '+' }` -->
 
     <form data-testid="calculator">
       <input id="numOneInput" data-testid="numOne" placeholder="First Number">
@@ -25,25 +16,18 @@
       <button onClick="handleOperatorClick(event, '*')">*</button>
       <button onClick="handleOperatorClick(event, '/')">/</button>
       <input id="numTwoInput" data-testid="numTwo" placeholder="Second Number">
-      <button onclick="createNewCalculationObject(event)">=</button>
-      <button onclick="resetCalculation(event)">C</button>
+      <button onClick="createCalculation(event)">=</button>
+      <button onClick="resetCalculator(event)">C</button>
     </form>
 
-      console.log("Line 32 index.html shown below calculator in the browser");
+    <section data-testid="recentResult">
+      <h2 id="currentResult">
+      </h2>
+    </section>
 
-
-
-      <section data-testid="recentResult">
-        <h2 id="currentResult">
-          <!-- The most recent calculation result goes here. -->
-        </h2>
-      </section>
-  
-      <section data-testid="resultHistory">
-        <ul id="calculationHistory">
-           <!-- The list of calculation results goes here. -->
-        </ul>
-      </section>
-    </body>
-  </html>
-    
+    <section data-testid="resultHistory">
+      <ul id="calculationHistory">
+      </ul>
+    </section>
+  </body>
+</html>
